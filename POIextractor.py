@@ -31,9 +31,7 @@ tz = timezone(timedelta(0))
 # Garmin FIT epoch
 FITepoch = datetime(1989, 12, 31, tzinfo=tz)
 
-garmin_dir = "/run/media/tugdual/GARMIN/Garmin/Locations/"
-
-
+# Opening the file
 stream = Stream.from_file(args.input_file)
 decoder = Decoder(stream)
 messages, errors = decoder.read()
